@@ -8,7 +8,6 @@
         }
 
         body {
-            font-family: "Lucida Console", "Courier New", monospace;
             font-size: 12px;
             margin: 0;
             padding: 0;

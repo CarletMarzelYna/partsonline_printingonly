@@ -16,13 +16,13 @@ class PdfController extends Controller
         $cecrType = $request->query('cecrType');
         $rptpType = $request->query('rptpType');
         $rptrType = $request->query('rptrType');
+        $loRPTdaType = $request->query('loRPTdaType');
 
         $view = 'print.receipt';
         $orientation = 'landscape';
         $paper = 'letter';
 
         switch ($format) {
-
             case 'Adetailed':
                 $view = 'print.receipt_aDetailed';
                 break;
@@ -36,9 +36,7 @@ class PdfController extends Controller
                 break;
 
             case 'report':
-
                 switch ($reportType) {
-
                     case 'RPTAR':
                         $view = 'print.report.RPTAR';
                         $paper = 'legal';
@@ -50,9 +48,7 @@ class PdfController extends Controller
                         break;
 
                     case 'TC':
-
                         switch ($taxCertType) {
-
                             case 'provincial':
                                 $view = 'print.report.TC.provincial';
                                 break;
@@ -65,22 +61,34 @@ class PdfController extends Controller
                                 $view = 'print.report.TC.default';
                                 break;
                         }
-
                         $orientation = 'portrait';
                         $paper = 'legal';
-
                         break;
 
-                    case 'LoDA':
-                        $view = 'print.report.LoDA';
-                        $orientation = '';
-                        $paper = '';
+                    case 'LoRPTDA':
+                        switch ($loRPTdaType) {
+                            case 'top':
+                                $view = 'print.report.LoRPTDA.top';
+                                break;
+                            
+                            case 'lot':
+                                $view = 'print.report.LoRPTDA.lot';
+                                break;
+
+                            case 'class':
+                                $view = 'print.report.LoRPTDA.class';
+                                break;
+
+                            default:
+                                $view = 'print.report.LoRPTDA.default';
+                                break;
+                        }
+                        $orientation = 'landscape';
+                        $paper = 'legal';
                         break;
 
                     case 'RPTDB':
-
                         switch ($rptDueBillType) {
-
                             case 'orig':
                                 $view = 'print.report.RPTDB.orig';
                                 break;
@@ -97,10 +105,8 @@ class PdfController extends Controller
                                 $view = 'print.report.RPTDB.default';
                                 break;
                         }
-
                         $orientation = 'landscape';
                         $paper = 'legal';
-
                         break;
 
                     case 'RPTAoC':
@@ -146,9 +152,7 @@ class PdfController extends Controller
                         break;
 
                     case 'CECR':
-
                         switch ($cecrType) {
-
                             case 'basic':
                                 $view = 'print.report.CECR.basic';
                                 break;
@@ -161,14 +165,11 @@ class PdfController extends Controller
                                 $view = 'print.report.CECR.default';
                                 break;
                         }
-
                         $orientation = 'landscape';
                         $paper = 'legal';
-
                         break;
 
                     case 'RPTP':
-
                         switch ($rptpType) {
                             case 'p':
                                 $view = 'print.report.RPTP.p';
@@ -186,10 +187,8 @@ class PdfController extends Controller
                                 $view = 'print.report.RPTP.default';
                                 break;
                         }
-
                         $orientation = 'landscape';
                         $paper = 'legal';
-
                         break;
 
                     case 'TR':
@@ -205,7 +204,6 @@ class PdfController extends Controller
                         break;
 
                     case 'RPTR':
-
                         switch ($rptrType) {
                             case 'r':
                                 $view = 'print.report.RPTR.r';
@@ -222,16 +220,13 @@ class PdfController extends Controller
                                 $orientation = 'landscape';
                                 break;
                         }
-
                         $paper = 'legal';
-
                         break;
 
                     default:
                         $view = 'print.report';
                         break;
                 }
-
                 break;
 
             default:
@@ -241,9 +236,7 @@ class PdfController extends Controller
 
         $pdf = Pdf::loadView($view)
             ->setPaper($paper, $orientation)
-            ->setOption([
-                'isRemoteEnabled' => true
-            ]);
+            ->setOption(['isRemoteEnabled' => true]);
 
         return response($pdf->stream('receipt.pdf'))
             ->header('Access-Control-Allow-Origin', '*')

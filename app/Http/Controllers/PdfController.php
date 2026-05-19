@@ -240,7 +240,10 @@ class PdfController extends Controller
         }
 
         $pdf = Pdf::loadView($view)
-            ->setPaper($paper, $orientation);
+            ->setPaper($paper, $orientation)
+            ->setOption([
+                'isRemoteEnabled' => true
+            ]);
 
         return response($pdf->stream('receipt.pdf'))
             ->header('Access-Control-Allow-Origin', '*')

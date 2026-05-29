@@ -4,13 +4,20 @@
     <meta charset="utf-8">
     <style>
         @page {
-            margin: 1mm;
+            size: legal landscape;
+            margin: 10px;
         }
 
-        body {
-            font-size: 12px;
-            margin: 0;
+        html, body {
+            margin: 10px;
             padding: 0;
+            width: 90%;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
         }
 
         table {
@@ -19,8 +26,9 @@
         }
 
         td, tr {
-            padding: 5px;
-            border: solid 1px black;
+            border: 1px solid #000;
+            text-align: center;
+            vertical-align: middle;
         }
     </style>
 </head>
@@ -43,17 +51,17 @@
 
     <table>
         <tr style='text-align: center;'>
-            <td>No.</td>
-            <td>Name of Taxpayer</td>
-            <td>Tax Dec. No.</td>
-            <td>Tax Year</td>
-            <td>Assessed Value</td>
-            <td>Classification</td>
-            <td>BSC</td>
-            <td>SEF</td>
-            <td>Unpaid</td>
-            <td>Paid</td>
-            <td>Total Tax</td>
+            <td style='width: 50px;'>No.</td>
+            <td style='width: 300px;'>Name of Taxpayer</td>
+            <td style='width: 150px;'>Tax Dec. No.</td>
+            <td style='width: 50px;'>Tax Year</td>
+            <td style='width: 100px;'>Assessed Value</td>
+            <td style='width: 150px;'>Classification</td>
+            <td style='width: 80px;'>BSC</td>
+            <td style='width: 80px;'>SEF</td>
+            <td style='width: 100px;'>Unpaid</td>
+            <td style='width: 100px;'>Paid</td>
+            <td style='width: 100px;'>Total Tax</td>
         </tr>
 
         <tr>

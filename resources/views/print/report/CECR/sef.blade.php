@@ -4,13 +4,20 @@
     <meta charset="utf-8">
     <style>
         @page {
-            margin: 1mm;
+            size: legal landscape;
+            margin: 10px;
         }
 
-        body {
-            font-size: 12px;
-            margin: 0;
+        html, body {
+            margin: 10px;
             padding: 0;
+            width: 90%;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
         }
 
         table {
@@ -19,8 +26,9 @@
         }
 
         td, tr {
-            padding: 5px;
-            border: solid 1px black;
+            border: 1px solid #000;
+            text-align: center;
+            vertical-align: middle;
         }
 
         .footer-fixed {
@@ -39,7 +47,7 @@
         Special Education Fund (SEF)
     </p>
 
-    <table>
+    <table style='font-size: 12px;'>
         <tr style='text-align: center;'>
             <td rowspan='2'>Month</td>
             <td colspan='3'>Current</td>
@@ -54,25 +62,25 @@
             <td>2015</td>
             <td><b>Total</b></td>
         </tr>
-        <tr style='text-align: right;'>
-            <td style='text-align: left;'>January</td>
-            <td>-</td>
-            <td>-</td>
-            <td><b> - </b></td>
-            <td>3,551.28</td>
-            <td>324,056.25</td>
-            <td><b> 327,607.53 </b></td>
-            <td>(327,607.53)</td>
+        <tr>
+            <td style='text-align: left; width: 200px;'>January</td>
+            <td style='text-align: right; width: 150px;'>-</td>
+            <td style='text-align: right; width: 150px;'>-</td>
+            <td style='text-align: right; width: 150px;'><b> - </b></td>
+            <td style='text-align: right; width: 150px;'>3,551.28</td>
+            <td style='text-align: right; width: 150px;'>324,056.25</td>
+            <td style='text-align: right; width: 150px;'><b> 327,607.53 </b></td>
+            <td style='text-align: right; width: 150px;'>(327,607.53)</td>
         </tr>
-        <tr style='text-align: right;'>
-            <td><b>TOTAL:</b></td>
-            <td>-</td>
-            <td>-</td>
-            <td><b> - </b></td>
-            <td>3,551.28</td>
-            <td>324,056.25</td>
-            <td><b> 327,607.53 </b></td>
-            <td>(327,607.53)</td>
+        <tr>
+            <td style='text-align: right;'><b>TOTAL:</b></td>
+            <td style='text-align: right;'>-</td>
+            <td style='text-align: right;'>-</td>
+            <td style='text-align: right;'><b> - </b></td>
+            <td style='text-align: right;'>3,551.28</td>
+            <td style='text-align: right;'>324,056.25</td>
+            <td style='text-align: right;'><b> 327,607.53 </b></td>
+            <td style='text-align: right;'>(327,607.53)</td>
         </tr>
     </table>
 

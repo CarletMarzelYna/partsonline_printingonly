@@ -4,13 +4,20 @@
     <meta charset="utf-8">
     <style>
         @page {
-            margin: 1mm;
+            size: legal landscape;
+            margin: 10px;
         }
 
-        body {
-            font-size: 12px;
-            margin: 0;
+        html, body {
+            margin: 10px;
             padding: 0;
+            width: 90%;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
         }
 
         table {
@@ -19,8 +26,9 @@
         }
 
         td, tr {
-            padding: 5px;
-            border: solid 1px black;
+            border: 1px solid #000;
+            text-align: center;
+            vertical-align: middle;
         }
     </style>
 </head>
@@ -37,7 +45,7 @@
     As of : <b>May 2026</b></p>
     <p style='text-align: right; padding-right: 30px;'>Page _ of _</p>
 
-    <table>
+    <table style='font-size: 12px;'>
         <tr style='text-align: center;'>
             <td rowspan='2'>Code</td>
             <td rowspan='2'>Name of Barangay</td>
@@ -61,18 +69,18 @@
         </tr>
 
         <tr style='border: none;'>
-            <td style='border: none; text-align: left;'>001</td>
-            <td style='border: none; text-align: left;'>POBLACION EAST</td>
-            <td style='border: none; text-align: right;'></td>
-            <td style='border: none; text-align: right;'></td>
-            <td style='border: none; text-align: right;'>288.00</td>
-            <td style='border: none; text-align: right;'>5</td>
-            <td style='border: none; text-align: right;'>590,991.70</td>
-            <td style='border: none; text-align: right;'>1,401</td>
-            <td style='border: none; text-align: right;'>163,349.25</td>
-            <td style='border: none; text-align: right;'>370</td>
-            <td style='border: none; text-align: right;'>754,628.95</td>
-            <td style='border: none; text-align: right;'>1,776</td>
+            <td style='border: none; text-align: left; width: 70px;'>001</td>
+            <td style='border: none; text-align: left; width: 180px;'>POBLACION EAST</td>
+            <td style='border: none; text-align: right; width: 100px;'></td>
+            <td style='border: none; text-align: right; width: 100px;'></td>
+            <td style='border: none; text-align: right; width: 100px;'>288.00</td>
+            <td style='border: none; text-align: right; width: 100px;'>5</td>
+            <td style='border: none; text-align: right; width: 100px;'>590,991.70</td>
+            <td style='border: none; text-align: right; width: 100px;'>1,401</td>
+            <td style='border: none; text-align: right; width: 100px;'>163,349.25</td>
+            <td style='border: none; text-align: right; width: 100px;'>370</td>
+            <td style='border: none; text-align: right; width: 100px;'>754,628.95</td>
+            <td style='border: none; text-align: right; width: 100px;'>1,776</td>
         </tr>
         <tr>
             <td colspan='2' style='border: none; text-align: right;'><b>Total:</b></td>

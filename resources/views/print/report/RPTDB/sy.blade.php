@@ -4,13 +4,20 @@
     <meta charset="utf-8">
     <style>
         @page {
-            margin: 1mm;
+            size: legal landscape;
+            margin: 10px;
         }
 
-        body {
-            font-size: 12px;
-            margin: 0;
+        html, body {
+            margin: 10px;
             padding: 0;
+            width: 90%;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
         }
 
         table {
@@ -19,8 +26,9 @@
         }
 
         td, tr {
-            padding: 5px;
-            border: solid 1px black;
+            border: 1px solid #000;
+            text-align: center;
+            vertical-align: middle;
         }
 
         .footer-fixed {
@@ -38,7 +46,7 @@
         <br>
         PROVINCE OF PANGASINAN
         <br>
-        <b>MUNICIPALITY OF <u>ALCALA</u></b>
+        <b>MUNICIPALITY OF ALCALA</b>
     </p>
     <p style='text-align: center;'>
         <b>Real Property Tax Due Bill</b>
@@ -49,61 +57,63 @@
     <table>
         <tr style='border:none;'>
             <td style='border:none; width: 200px; text-align: right;'>Name of Taxpayer: </td>
-            <td style='border:none;'><u>ABELLA, APOLONIA</u></td>
+            <td style='border:none; text-align: left;'><u>ABELLA, APOLONIA</u></td>
             <td style='border:none; width: 200px; text-align: right;'>Local TIN: </td>
-            <td style='border:none; width: 200px;'><u>0130030013270</u></td>
+            <td style='border:none; width: 200px; text-align: left;'><u>0130030013270</u></td>
         </tr>
         <tr style='border:none;'>
             <td style='border:none; width: 200px; text-align: right;'>Address: </td>
-            <td colspan='3' style='border:none;'><u>BERSAMIN, CABALITIAN, ALCALA, PANGASINAN</u></td>
+            <td colspan='3' style='border:none; text-align: left;'><u>BERSAMIN, CABALITIAN, ALCALA, PANGASINAN</u></td>
         </tr>
     </table>
 
-    <table>
+    <br>
+
+    <table style='font-size: 12px;'>
         <tr style='text-align: center;'>
-            <td>Payment Period</td>
-            <td>Kind</td>
-            <td>Cadastral Lot No.</td>
-            <td>Class</td>
-            <td>Assessed Value</td>
-            <td>Location</td>
-            <td>Tax Due <br> (Basic + SEF)</td>
-            <td>Discount <br> (Basic + SEF)</td>
-            <td>Penalty <br> (Basic + SEF)</td>
-            <td>Net Tax Due</td>
+            <td style="width:120px;">Payment Period</td>
+            <td style="width:20px;">Kind</td>
+            <td style="width:120px;">Cadastral Lot No.</td>
+            <td style="width:20px;">Class</td>
+            <td style="width:120px;">Assessed Value</td>
+            <td style="width:345px;">Location</td>
+            <td style="width:100px;">Tax Due <br> (Basic + SEF)</td>
+            <td style="width:100px;">Discount <br> (Basic + SEF)</td>
+            <td style="width:100px;">Penalty <br> (Basic + SEF)</td>
+            <td style="width:120px;">Net Tax Due</td>
         </tr>
 
         <tr style='border:none;'>
-            <td colspan='10' style='border:none;'>PIN No.: <b>013-03-0005-018-38-1002</b></td>
+            <td colspan='10' style='border:none; text-align: left;'>PIN No.: <b>013-03-0005-018-38-1002</b></td>
         </tr>
         <tr>
-            <td colspan='10' style='text-align: center;'><b>2011</b></td>
+            <td colspan='10' style='text-align: center;'><b>2003</b></td>
         </tr>
         <tr>
-            <td style='text-align: left; width: 120px;'>YEARLY</td>
-            <td style='text-align: center; width: 20px;'>B</td>
-            <td style='text-align: left; width: 130px;'></td>
-            <td style='text-align: center; width: 20px;'>R</td>
-            <td style='text-align: right; width: 120px;'>69,120.00</td>
-            <td style='text-align: left; width: 100px;'>BERSAMIN</td>
-            <td style='text-align: right; width: 100px;'>1,382.40</td>
-            <td style='text-align: right; width: 100px;'>0.00</td>
-            <td style='text-align: right; width: 100px;'>138.24</td>
-            <td style='text-align: right; width: 120px;'>1,520.64</td>
+            <td style='text-align: left;'>YEARLY</td>
+            <td style='text-align: center;'>B</td>
+            <td style='text-align: left;'></td>
+            <td style='text-align: center;'>R</td>
+            <td style='text-align: right;'>69,120.00</td>
+            <td style='text-align: left;'>BERSAMIN</td>
+            <td style='text-align: right;'>1,382.40</td>
+            <td style='text-align: right;'>0.00</td>
+            <td style='text-align: right;'>138.24</td>
+            <td style='text-align: right;'>1,520.64</td>
         </tr>
         <tr>
             <td colspan='6' style='text-align: right;'>TOTALS:</td>
-            <td style='text-align: right; width: 100px;'>1,382.40</td>
-            <td style='text-align: right; width: 100px;'>0.00</td>
-            <td style='text-align: right; width: 100px;'>138.24</td>
-            <td style='text-align: right; width: 120px;'>1,520.64</td>
+            <td style='text-align: right;'>1,382.40</td>
+            <td style='text-align: right;'>0.00</td>
+            <td style='text-align: right;'>138.24</td>
+            <td style='text-align: right;'>1,520.64</td>
         </tr>
     </table>
 
-    <br><br><br>
+    <br><br>
 
     <table>
-        <tr style='border:none; text-align: center;'>
+        <tr style='border:none; text-align: center; font-size: 12px;'>
             <td style='border:none;'>
                 Prepared By: _____________________________
             </td>
@@ -120,7 +130,7 @@
     <div class="footer-fixed">
         <table style="width:100%;">
             <tr style="border:none;">
-                <td style="border:none; font-size:10px;">
+                <td style="border:none; font-size:10px; text-align: left;">
                     <p>
                         Pangasinan RPT Tax Collection System Generated report
                         <br>

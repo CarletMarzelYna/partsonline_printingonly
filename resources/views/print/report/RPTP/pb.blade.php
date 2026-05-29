@@ -4,13 +4,20 @@
     <meta charset="utf-8">
     <style>
         @page {
-            margin: 1mm;
+            size: legal landscape;
+            margin: 10px;
         }
 
-        body {
-            font-size: 12px;
-            margin: 0;
+        html, body {
+            margin: 10px;
             padding: 0;
+            width: 90%;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
         }
 
         table {
@@ -19,8 +26,9 @@
         }
 
         td, tr {
-            padding: 5px;
-            border: solid 1px black;
+            border: 1px solid #000;
+            text-align: center;
+            vertical-align: middle;
         }
     </style>
 </head>
@@ -50,11 +58,11 @@
         </tr>
 
         <tr style='border: none;'>
-            <td style='border: none; text-align: left;'>001</td>
-            <td style='border: none; text-align: left;'>POBLACION EAST</td>
-            <td style='border: none; text-align: right;'></td>
-            <td style='border: none; text-align: right;'>754,628.95</td>
-            <td style='border: none; text-align: right;'>754,628.95</td>
+            <td style='border: none; text-align: left; width: 100px;'>001</td>
+            <td style='border: none; text-align: left; width: 420px;'>POBLACION EAST</td>
+            <td style='border: none; text-align: right; width: 250px;'></td>
+            <td style='border: none; text-align: right; width: 250px;'>754,628.95</td>
+            <td style='border: none; text-align: right; width: 250px;'>754,628.95</td>
         </tr>
         <tr>
             <td colspan='2' style='border: none; text-align: right;'><b>Total:</b></td>

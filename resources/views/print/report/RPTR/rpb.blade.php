@@ -4,13 +4,20 @@
     <meta charset="utf-8">
     <style>
         @page {
-            margin: 1mm;
+            size: legal landscape;
+            margin: 10px;
         }
 
-        body {
-            font-size: 12px;
-            margin: 0;
+        html, body {
+            margin: 10px;
             padding: 0;
+            width: 90%;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
         }
 
         table {
@@ -19,8 +26,9 @@
         }
 
         td, tr {
-            padding: 5px;
-            border: solid 1px black;
+            border: 1px solid #000;
+            text-align: center;
+            vertical-align: middle;
         }
 
         .footer-fixed {
@@ -62,13 +70,13 @@
         </tr>
 
         <tr>
-            <td style='text-align: left;'>ESPIRITU, VENANCIO</td>
-            <td style='text-align: right;'>03-0001-00013</td>
-            <td style='text-align: right;'>4,590.00</td>
-            <td style='text-align: right;'>17,760.00</td>
-            <td style='text-align: right;'>177.60</td>
-            <td style='text-align: right;'>177.60</td>
-            <td style='text-align: right;'>335.20</td>
+            <td style='text-align: left; width: 370px;'>ESPIRITU, VENANCIO</td>
+            <td style='text-align: right; width: 180px;'>03-0001-00013</td>
+            <td style='text-align: right; width: 180px;'>4,590.00</td>
+            <td style='text-align: right; width: 180px;'>17,760.00</td>
+            <td style='text-align: right; width: 100px;'>177.60</td>
+            <td style='text-align: right; width: 100px;'>177.60</td>
+            <td style='text-align: right; width: 150px;'>335.20</td>
         </tr>
         <tr>
             <td colspan='3' style='text-align: right;'>GRAND TOTAL</td>
@@ -95,7 +103,7 @@
     <div class="footer-fixed">
         <table style="width:100%;">
             <tr style="border:none;">
-                <td style="border:none; font-size:10px;">
+                <td style="border:none; font-size:10px; text-align: left;">
                     Run Date: May 13, 2026 11:34 AM
                 </td>
             </tr>

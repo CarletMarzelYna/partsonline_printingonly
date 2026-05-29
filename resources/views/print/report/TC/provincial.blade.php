@@ -1,14 +1,21 @@
+<?php
+$path = public_path('images/seal.png');
+$type = pathinfo($path, PATHINFO_EXTENSION);
+$data = file_get_contents($path);
+$base64 = 'data:image/' . $type . ';base64,' . base64_encode($data);
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <style>
         @page {
-            margin: 5mm;
+            margin: 10mm;
         }
 
         body {
-            font-size: 12px;
+            font-size: 16px;
             margin: 0;
             padding: 0;
         }
@@ -19,7 +26,6 @@
         }
 
         td, tr {
-            padding: 5px;
             border: solid 1px black;
         }
     </style>
@@ -28,8 +34,7 @@
     <table style="width: 100%; border: none;">
         <tr style="border: none;">
             <td style="width: 80px; border: none; text-align: center;">
-                <img src="{{ public_path('images/seal.png') }}"
-                    style="width: 70px; height: 70px;">
+                <img src="<?= $base64 ?>" style="width:70px;height:70px;">
             </td>
 
             <td style="border: none; text-align: center;">
@@ -38,30 +43,27 @@
                     <br>
                     Province of PANGASINAN
                 </p>
-
                 <p style="margin-top: 5px;">
                     <b>Office of the Provincial Treasurer</b>
                 </p>
             </td>
 
             <td style="width: 80px; border: none; text-align: center;">
-                <img src="{{ public_path('images/seal.png') }}"
-                    style="width: 70px; height: 70px;">
+                <img src="<?= $base64 ?>" style="width:70px;height:70px;">
             </td>
         </tr>
     </table>    
 
     <hr>
-    <p style='text-align: center; font-size: 15px; font-weight: 500;'><u>TAX CERTIFICATE</u></p>
-    <br>
+    <p style='text-align: center; font-size: 25px; font-weight: 500;'><u>TAX CERTIFICATE</u></p>
     <p><b>TO WHOM IT MAY CONCERN:</b></p>
-    <p style="text-indent: 40px;">
+    <p style="text-indent: 40px;"> 
         This is to certify that, according to the records kept in this office, 
         the real property/ies declared for taxation purposes under the name of 
         <b>ABELLA, ALEJANDRO,</b> this minicipality,
     </p>
 
-    <table>
+    <table style='font-size: 12px;'>
         <tr style='text-align: center;'>
             <td>Tax Declaration No.</td>
             <td>PIN</td>
@@ -86,9 +88,8 @@
         It is further certified that taxes of the above-named property/ies 
         have been paid up to date, as shown by the records in this office.
     </p>
-    <br>
 
-    <table>
+    <table style='font-size: 12px;'>
         <tr style='text-align: center;'>
             <td>Tax Declaration No.</td>
             <td>Tax Year</td>
@@ -131,46 +132,51 @@
     <p style="text-indent: 40px;">Given this 13th day of May, 2026 at the, Pangasinan, Philippines.</p>
 
 
-    <br><br>
+    <br>
     <table>
-        <tr style='border: none;'>
+        <tr style='border: none; font-size:14px;'>
             <td style='border: none;'>Verified and Checked:</td>
             <td style='border: none;'>Noted By:</td>
         </tr>
         <tr style='text-align: center; border: none;'>
-            <td style='border: none;'></td>
-            <td style='border: none;'></td>
-        </tr>
-        <tr style='text-align: center; border: none;'>
             <td style='border: none;'>
+                <b>gerard</b>
+                <br>
                 _______________________________________
             </td>
             <td style='border: none;'>
+                <b>ROSELILY A. FERRER</b>
+                <br>
                 _______________________________________
                 <br>
                 Municipal Treasurer
             </td>
         </tr>
+        
     </table>
 
-    <br><br>
+    <br>
 
-    <table style='margin:0px; padding:0px;'>
+    <table style='margin:0px; padding:0px; font-size:14px;'>
         <tr style='border: none; margin:0px; padding:0px;'>
             <td style='border: none; margin:0px; padding:0px; width: 150px;'>Paid under OR No.:</td>
-            <td style='border: none; margin:0px; padding:0px;'><u> 2725653 </u></td>
+            <td style='border: none; margin:0px; padding:0px; width: 150px; border-bottom: 1px solid black;'> 2725653 </td>
+            <td style='border: none;'></td>
         </tr>
         <tr style='border: none; margin:0px; padding:0px;'>
             <td style='border: none; margin:0px; padding:0px; width: 150px;'>Date Issued:</td>
-            <td style='border: none; margin:0px; padding:0px;'><u> 5/13/2026 </u></td>
+            <td style='border: none; margin:0px; padding:0px; border-bottom: 1px solid black;'> 5/13/2026 </td>
+            <td style='border: none;'></td>
         </tr>
         <tr style='border: none; margin:0px; padding:0px;'>
             <td style='border: none; margin:0px; padding:0px; width: 150px;'>Amount Paid:</td>
-            <td style='border: none; margin:0px; padding:0px;'><u> 280.80 </u></td>
+            <td style='border: none; margin:0px; padding:0px; border-bottom: 1px solid black;'> 280.80 </td>
+            <td style='border: none;'></td>
         </tr>
         <tr style='border: none; margin:0px; padding:0px;'>
             <td style='border: none; margin:0px; padding:0px; width: 150px;'>Doc. Stamp:</td>
-            <td style='border: none; margin:0px; padding:0px;'><u>  </u></td>
+            <td style='border: none; margin:0px; padding:0px; border-bottom: 1px solid black;'></td>
+            <td style='border: none;'></td>
         </tr>
     </table>
 </body>

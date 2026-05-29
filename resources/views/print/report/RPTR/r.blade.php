@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <style>
         @page {
-            margin: 1mm;
+            margin: 5mm;
         }
 
         body {
-            font-size: 12px;
+            font-size: 14px;
             margin: 0;
             padding: 0;
         }
@@ -60,11 +60,11 @@
         </tr>
 
         <tr>
-            <td style='text-align: left;'>1. POBLACION EAST</td>
-            <td style='text-align: right;'>39,361,810.00</td>
-            <td style='text-align: right;'>393,618.10</td>
-            <td style='text-align: right;'>393,618.10</td>
-            <td style='text-align: right;'>787,236.20</td>
+            <td style='text-align: left; width: 200px;'>1. POBLACION EAST</td>
+            <td style='text-align: right; width: 100px;'>39,361,810.00</td>
+            <td style='text-align: right; width: 100px;'>393,618.10</td>
+            <td style='text-align: right; width: 100px;'>393,618.10</td>
+            <td style='text-align: right; width: 100px;'>787,236.20</td>
         </tr>
         <tr>
             <td style='text-align: center;'>GRAND TOTAL</td>
